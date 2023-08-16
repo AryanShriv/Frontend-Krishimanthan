@@ -1,0 +1,30 @@
+/* gallery.css */
+
+.gallery {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.gallery h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #6ABA77;
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.images img {
+    width: 100%;
+    max-width: 345px;
+    height: 159px;
+    border-radius: 13px;
+    padding: 5px 2px;
+}

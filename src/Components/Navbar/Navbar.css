@@ -1,0 +1,62 @@
+/* Navbar.css */
+.navbar {
+    background-color: #f3fff4;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Style the logo image */
+.nav-logo img {
+    width: 100px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.nav-toggle {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* Style the links */
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: green;
+}

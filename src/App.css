@@ -4,7 +4,9 @@
   margin: 0 auto;
   top: 0;
   background-color: #f1f1f1;
+  letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 .center {
@@ -14,4 +16,8 @@
 .center-desktop {
   width: 93%;
   margin: 0 auto;
+}
+
+p{
+  text-align: justify;
 }

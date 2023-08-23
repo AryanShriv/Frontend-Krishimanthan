@@ -1,68 +1,85 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Autoplay,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import "./Carousel.css";
 
 import slider1 from "../../Assets/Swiper/slider1.jpg";
-import slider2 from "../../Assets/Swiper/slider2.jpg";
-import slider3 from "../../Assets/Swiper/slider-3.jpg";
-import slider4 from "../../Assets/Swiper/slider-4.jpg";
-// import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-export default function App() {
+const slidesData = [
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  {
+    image: slider1,
+    title: "समाचार अद्यतन",
+    description:
+      "हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान की दौड़!",
+  },
+  // Add more slide data here
+];
+
+export default function Carousel() {
   return (
-    <>
-      <div className="swiper-container">
-        <Swiper
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="image1">
-              <img src={slider1} alt="" />
+    <div className="carousel-container">
+      <Swiper
+        cssMode={true}
+        navigation={true}
+        pagination={true}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]} // Add Autoplay module
+        autoplay={{ delay: 2000, disableOnInteraction: false }} // Autoplay settings
+        className="mySwiper"
+      >
+        {slidesData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide-content">
+              <img src={slide.image} alt="" />
               <div className="color-overlay"></div>
               <div className="slider-text">
-                <h1>समाचार अद्यतन</h1>
-                <p>
-                  हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए उत्थान
-                  की दौड़! हेडलाइन: सौर ऊर्जा से सहायिता, खेती के क्षेत्र में नए
-                  उत्थान की दौड़!
-                </p>
+                <h1>{slide.title}</h1>
+                <p>{slide.description}</p>
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="image1">
-              <img src={slider2} alt="" />
-              <div className="color-overlay"></div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="image1">
-              <img src={slider3} alt="" />
-              <div className="color-overlay"></div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="image1">
-              <img src={slider4} alt="" />
-              <div className="color-overlay"></div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </>
+        ))}
+      </Swiper>
+    </div>
   );
 }

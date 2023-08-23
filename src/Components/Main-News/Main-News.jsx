@@ -1,6 +1,11 @@
+// src/Components/Main-News/Article.jsx
 import React from "react";
 import article from "../../Assets/Swiper/slider-4.jpg";
 import "./main-News.css";
+import { Link } from "react-router-dom";
+
+import Sankalp from "../Sankalp/Sankalp";
+
 const Article = () => {
   return (
     <>
@@ -20,7 +25,12 @@ const Article = () => {
             महत्वपूर्ण परिवर्तन देखने को मिल रहा है।
           </p>
         </div>
-        <button className="button">आगे पढ़ें</button>
+        <button className="button">
+          <Link to="/Sankalp" component={Sankalp}>
+            {" "}
+            आगे पढ़ें{" "}
+          </Link>
+        </button>
       </div>
     </>
   );

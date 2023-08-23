@@ -12,6 +12,7 @@ const Navbar = () => {
           {/* Use the imported logo */}
           <Link to="/" className="nav-logo">
             <img className="Logo" src={Logo} alt="Your Logo" />
+            <h5 className="tagline">Lorem ipsum dolor sit amet</h5>
           </Link>
         </div>
         <ul className="nav-links">

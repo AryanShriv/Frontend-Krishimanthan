@@ -1,54 +1,50 @@
-.swiper-container {
+/* Carousel.css */
+.carousel-container {
     width: 100%;
 }
 
-.swiper {
+.mySwiper {
     margin: 21px;
 }
 
-.swiper-slide {
-    display: inline;
-}
-
-.image1 {
+.slide-content {
     position: relative;
     height: 35rem;
-
+    overflow: hidden;
+    /* Hide gradient overflow */
 }
 
 .color-overlay {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-    opacity: .6;
+    height: 50%;
+    background-image: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0));
 }
 
-.image1 img {
+.slide-content img {
     height: 35rem;
     width: 100%;
     object-fit: cover;
     object-position: center;
-
 }
-
 
 .slider-text {
     position: absolute;
-    top: 25%;
+    bottom: 10%;
+    left: 5%;
     color: #fff;
     font-weight: 500;
-    margin-left: 90px;
-    margin-top: 144px;
-
+    max-width: 60%;
 }
 
 .slider-text h1 {
     font-size: 55px;
+    margin-bottom: 20px;
 }
-
 
 .swiper-pagination {
     margin-bottom: 5rem;
@@ -57,25 +53,25 @@
 .swiper-pagination-bullet {
     width: 20px;
     height: 20px;
-
 }
 
 .swiper-pagination-bullet-active {
     background: white;
 }
 
-
 .swiper-button-prev {
-    color: black;
+    color: white;
+    /* Set to white */
 }
 
 .swiper-button-next {
-    color: black;
+    color: white;
+    /* Set to white */
 }
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, -73px);
+    bottom: -73px;
 }

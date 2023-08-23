@@ -3,6 +3,10 @@
     background-color: #f3fff4;
     color: rgb(0, 0, 0);
     padding: 10px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0%;
+    z-index: 100;
 }
 
 .nav-center {
@@ -21,11 +25,17 @@
 .nav-logo {
     display: inline-block;
     margin-right: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
 }
 
 /* Style the logo image */
 .nav-logo img {
-    width: 100px;
+    width: 200px;
     /* Adjust the width as needed */
     height: auto;
     /* Maintain aspect ratio */
@@ -47,6 +57,18 @@
 
 .nav-links li {
     margin-right: 20px;
+    font-size: 20px;
+}
+
+/* Style the links container */
+.nav-links-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    /* Set the border color */
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.3s ease-in-out;
 }
 
 /* Style the links */
@@ -54,9 +76,38 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
     color: green;
+}
+
+/* Enhance appearance of links box on hover */
+.nav-links-box:hover {
+    border-color: green;
+}
+
+.nav-header h5{
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Show the hamburger icon for smaller screens */
+@media screen and (max-width: 768px) {
+    /* ... Existing styles ... */
+
+    .nav-logo img {
+        width: 100px;
+        margin-left: 8px;
+        /* Adjust the width as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .nav-toggle {
+        display: block;
+        /* Show the hamburger icon */
+    }
 }

@@ -6,9 +6,12 @@ import { lifestyleData } from "../../DummyData";
 function Krishi() {
   return (
     <>
+    
       <div className="heading">
         <p>शीर्षक - कृषि</p>
       </div>
+      <div className="hero-section">
+        <div className="page-content">
       <div className="MainCardContainer">
         {mainCardData.map((card, index) => (
           <div className="MainCard" key={index}>
@@ -185,8 +188,13 @@ function Krishi() {
           ))}
         </div>
       </div>
+      </div>
+     
+      
+      </div>
 
       {/* Section Navigation */}
+
       <div className="section-navigation">
         <h2 className="heading">इस पृष्ठ पर</h2>
         <ul>
@@ -197,18 +205,13 @@ function Krishi() {
             <a href="#Pradeshik">प्रादेशिक समाचार</a>
           </li>
           <li>
-            <a href="#Corporate">कारपोरेट कहानियां की गतिविधियां</a>
+            <a href="#Success">सफल पंचायतों की कहानियां</a>
           </li>
           <li>
-            <a href="#Success">सफलता की कहानी</a>
+            <a href="#New">पंचायतों में हो रहे नवाचार</a>
           </li>
           <li>
-            <a href="#Yojnaa">कृषि विभाग द्वारा संचालित योजनाएं</a>
-          </li>
-          <li>
-            <a href="#New">कृषि में हो रहे नवाचार</a>
-          </li>
-          <li>
+            <a href="#Yojnaa">पंचायत विभाग द्वारा चलाई जा रही योजनाएं</a>
             <a href="#Crop">फसल तकनीक</a>
           </li>
           <li>
@@ -219,6 +222,7 @@ function Krishi() {
           </li>
         </ul>
       </div>
+      
     </>
   );
 }

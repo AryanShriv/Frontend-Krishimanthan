@@ -37,7 +37,7 @@ function App() {
           <Route exact path="/Panchayat" element={<Panchayat />} />
           <Route exact path="/Van" element={<Van />} />
           <Route exact path="/Epaper" element={<Epaper />} />
-          <Route exact path="/Sankalp" element={<Sankalp />} />
+         
           <Route path="/category/:categoryName" exact component={Category} />
           <Route
             path="/category/:categoryName/:subcategoryName"
@@ -48,6 +48,10 @@ function App() {
           {/* Other routes */}
         </Routes>
       </div>
+
+      <Routes>
+      <Route exact path="/Sankalp" element={<Sankalp />} />
+      </Routes>
       <Footer />
     </Router>
   );

@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import "./App.css";
 import Home from "./Pages/Home";
@@ -20,7 +22,14 @@ import Category from "./Components/Category";
 import Subcategory from "./Components/Subcategory";
 import NewsDetail from "./Components/NewsDetail";
 
+
+  
+
 function App() {
+  
+
+  
+  
   return (
     <Router>
       <Navbar />

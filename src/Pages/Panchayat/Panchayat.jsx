@@ -1,5 +1,5 @@
 import React from "react";
-import "./Panchayat.css";
+// import "./Panchayat.css";
 import { mainCardData } from "../../Dummy";
 import { lifestyleData } from "../../DummyData";
 

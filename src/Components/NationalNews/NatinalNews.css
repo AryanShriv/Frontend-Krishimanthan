@@ -1,11 +1,12 @@
 :root {
     --primary-color: #66aa70;
     --light-green: #f3fff4;
+    --dark-green:#306143  ;
+    --heading-color: #054705;
     --white: white;
     --black: #000;
     --grey: #6c6c6c;
 }
-
 /* LifestyleCard.css */
 
 .LocalNews {
@@ -19,14 +20,13 @@
     width: 100%;
     text-align: center;
     margin-bottom: 15px;
-}
-
-.heading h2 {
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-size: 2rem;
     font-weight: 800;
-    margin: 3vh 0;
+    margin: 3vh 0
 }
+
+
 
 .cardContainer {
     display: flex;
@@ -34,7 +34,7 @@
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2vh;
-    width: 65rem
+    width: 62rem
 }
 
 .card {
@@ -76,6 +76,7 @@
     }
 
     .cardContainer {
+        
         row-gap: 1.5vh;
     }
 
@@ -96,3 +97,27 @@
         margin-top: 0.5vh;
     }
 }
+/* Media query for iPad screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cardContainer {
+        padding: 0;
+        width: 100%!important;
+    }
+    
+    .card {
+        width: 49%!important;
+ 
+        max-width: none;  
+    }
+    
+.card .card-content {
+    padding: 1.5vh 1vw;
+}
+    .card img {
+        width: 100%;
+        height: 20vh!important;
+    }
+    
+}
+    

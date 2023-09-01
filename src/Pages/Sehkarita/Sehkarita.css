@@ -1,10 +1,12 @@
 :root {
     --primary-color: #66aa70;
     --light-green: #f3fff4;
+    --dark-green:#306143  ;
+    --heading-color: #054705;
     --white: white;
     --black: #000;
     --grey: #6c6c6c;
-}
+  }
 
 .MainCardContainer {
     width: 100%;
@@ -21,6 +23,7 @@
 
 .ImgHeading {
     display: flex;
+    color: var(--heading-color);
     justify-content: space-between;
     width: 100%;
 }
@@ -37,7 +40,7 @@
 }
 
 .heading p {
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-size: 2rem;
     font-weight: 800;
     margin: 3vh 0;
@@ -68,7 +71,7 @@
     transform: translateX(-50%);
     text-align: center;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--heading-color);
     width: 45%;
     padding: 1vh 0;
     border-radius: 5px;
@@ -116,7 +119,7 @@
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2vh;
-    width: 65rem
+    width: 62rem
 }
 
 .card {
@@ -156,14 +159,15 @@
 .section-navigation {
     position: sticky;
     top: 20px;
-    width: 270px;
+    width: 230px!important;
     background-color: var(--light-green);
     padding: 15px 8px;
     border-radius: 10px;
     max-height: calc(100vh - 30px);
     overflow-y: hidden; /* Hide vertical scrollbar */
   }
-  
+
+
   .section-navigation ul {
     list-style: none;
     padding: 0;
@@ -172,14 +176,18 @@
   
   .section-navigation a {
     scroll-behavior: smooth;
-    margin: 8px;
+    margin: 5px;
     text-decoration: none;
     color: var(--black);
     font-weight: bold;
     display: block;
-    padding: 12px 6px;
+    padding: 10px 6px;
     border-radius: 8px;
     transition: 0.3s ease-in-out;
+  }
+
+  .section-navigation a .p-8{
+    padding: 8px 6px;
   }
   
   /* .section-navigation li {
@@ -241,6 +249,7 @@
     }
 
     .cardContainer {
+        width: 100%;
         row-gap: 1.5vh;
     }
 
@@ -296,3 +305,98 @@
         padding: 1vh 20vw;
     }
 }
+
+.section-navigation a {
+    /* background: transparent; */
+    border: 2px solid var(--primary-color);
+    border-radius: 11px;
+}
+
+
+/* Hover state */
+
+/* Media Query */
+
+@media (max-width: 700px) {
+    .LifestyleCard {
+        width: 100%;
+        padding: 0 5vw;
+    }
+
+    .heading p {
+        text-align: center;
+    }
+
+    .cardContainer {
+        width: 100%;
+        row-gap: 1.5vh;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card .card-content {
+        padding: 1.5vh 3vw;
+    }
+
+    .card .card-content h5 {
+        font-size: 1.2rem;
+    }
+
+    .card .card-content p {
+        font-size: 1rem;
+        margin-top: 0.5vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .MainCardContainer {
+        width: 90%;
+        margin: auto;
+    }
+
+    .ImgHeading {
+        flex-direction: column;
+    }
+
+    .CardImage {
+        width: 100%;
+    }
+
+    .CardHeading {
+        width: 100%;
+        margin-top: 1vh;
+    }
+
+    .description p {
+        line-height: 1.7rem;
+        font-size: 1rem;
+    }
+
+    .CardHeading h5 {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    .MainCard .description button {
+        width: 100%;
+        padding: 1vh 20vw;
+    }
+}
+
+/* Media query for iPad screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .CardImage {
+      width: 40%;
+      height: 20vh;
+      overflow: hidden;
+      
+    }
+    .CardImage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+  }
+  }

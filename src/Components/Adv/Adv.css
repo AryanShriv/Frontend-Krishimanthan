@@ -10,9 +10,27 @@
 
 .advertise img {
     display: block;
-    width: 68rem;
+    width: 65rem;
     height: 15rem;
     border-radius: 10px;
     margin-top: 10px;
     /* Optional spacing from the top */
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .advertise img {
+        max-width: 100%; /* Adjust to utilize full width for small devices */
+    }
+    .advertise img {
+        height: 10rem;
+    }
+}
+
+/* Media query for iPad screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .advertise img {
+        max-width: 94%; 
+    }
 }

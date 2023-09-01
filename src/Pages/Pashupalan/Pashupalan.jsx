@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pashupalan.css";
+// import "./Pashupalan.css";
 import { mainCardData } from "../../Dummy";
 import { lifestyleData } from "../../DummyData";
 

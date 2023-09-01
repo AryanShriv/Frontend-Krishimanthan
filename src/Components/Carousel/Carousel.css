@@ -75,3 +75,60 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -73px;
 }
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .carousel-container,
+    .mySwiper,
+    .slide-content,
+    .color-overlay,
+    .slide-content img,
+    .slider-text {
+        width: 100%;
+        margin: 0;
+        margin-top: 0.5vh;
+        max-width: 100%;
+    }
+
+    .slide-content,
+    .slide-content img {
+        height: auto;
+    }
+
+    .slider-text {
+        bottom: 5%;
+        left: 0%;
+        font-size: 18px;
+    }
+
+    .slider-text h1 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .slider-text p {
+        text-align: center;
+        font-size: 10px;
+        padding: 0 10%;
+    }
+
+    .swiper-pagination {
+        margin-bottom: 2rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 1rem;
+    }
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: -30px;
+    }
+}

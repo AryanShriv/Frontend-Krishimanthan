@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sehkarita.css";
+// import "./Sehkarita.css";
 import { mainCardData } from "../../Dummy";
 import { lifestyleData } from "../../DummyData";
 
@@ -173,15 +173,15 @@ function Sehkarita() {
             <a href="#Success">सफल सहकारी समितियों की कहानियां</a>
           </li>
           <li>
-            <a href="#International">
+            <a href="#International" >
               अंतरराष्ट्रीय स्तर पर संचालित सहकारी गतिविधियां
             </a>
           </li>
           <li>
-            <a href="#New">सहकारिता में हो रहे नवाचार</a>
+            <a href="#New" >सहकारिता में हो रहे नवाचार</a>
           </li>
           <li>
-            <a href="#Praise">
+            <a href="#Praise" >
               किसी सरकारी कर्मचारी ने यदि कोई उल्लेखनीय कार्य किया है तो उसकी
               जानकारी
             </a>

@@ -10,7 +10,7 @@
 }
 
 .center {
-  width: 60%;
+  width: 58%;
   margin: 0 auto;
 }
 .center-desktop {
@@ -20,4 +20,10 @@
 
 p{
   text-align: justify;
+}
+@media (max-width: 768px) {
+  .center {
+    width: 96%;
+    margin: 0 auto;
+  }
 }

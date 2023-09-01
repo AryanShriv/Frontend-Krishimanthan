@@ -1,11 +1,12 @@
 :root {
     --primary-color: #66aa70;
     --light-green: #f3fff4;
+    --dark-green:#306143  ;
+    --heading-color: #054705;
     --white: white;
     --black: #000;
     --grey: #6c6c6c;
-}
-
+  }
 .MainCardContainer {
     width: 100%;
     display: flex;
@@ -21,6 +22,7 @@
 
 .ImgHeading {
     display: flex;
+    color: var(--heading-color);
     justify-content: space-between;
     width: 100%;
 }
@@ -37,7 +39,7 @@
 }
 
 .heading p {
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-size: 2rem;
     font-weight: 800;
     margin: 3vh 0;
@@ -90,7 +92,7 @@
 
 /* LifestyleCard.css */
 
-.LocalNewsKrishi {
+.LocalNewsVan {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,7 +118,7 @@
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2vh;
-    width: 65rem
+    width: 62rem
 }
 
 .card {
@@ -154,12 +156,20 @@
 .section-navigation {
     position: sticky;
     top: 20px;
-    width: 270px;
+    width: 230px!important;
     background-color: var(--light-green);
     padding: 15px 8px;
     border-radius: 10px;
     max-height: calc(100vh - 30px);
     overflow-y: hidden; /* Hide vertical scrollbar */
+  }
+
+  .section-navigation .heading{
+    margin: 2vh 0;
+  }
+
+  .section-navigation .margin-5{
+    margin-bottom: 5px;
   }
   
   .section-navigation ul {
@@ -170,7 +180,7 @@
   
   .section-navigation a {
     scroll-behavior: smooth;
-    margin: 8px;
+    margin: 5px;
     text-decoration: none;
     color: var(--black);
     font-weight: bold;
@@ -228,6 +238,7 @@
 /* Media Query */
 
 @media (max-width: 700px) {
+    
     .LifestyleCard {
         width: 100%;
         padding: 0 5vw;
@@ -238,6 +249,7 @@
     }
 
     .cardContainer {
+        width: 100%;
         row-gap: 1.5vh;
     }
 
@@ -293,3 +305,19 @@
         padding: 1vh 20vw;
     }
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .CardImage {
+      width: 40%;
+      height: 20vh;
+      overflow: hidden;
+      
+    }
+    .CardImage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+  }
+  }

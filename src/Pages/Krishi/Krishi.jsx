@@ -196,7 +196,7 @@ function Krishi() {
       {/* Section Navigation */}
 
       <div className="section-navigation">
-        <h2 className="heading">इस पृष्ठ पर</h2>
+        <h2 className="heading margin-5">इस पृष्ठ पर</h2>
         <ul>
           <li>
             <a href="#National">राष्ट्रीय समाचार</a>
